@@ -1,0 +1,12 @@
+{
+  "name": "lucatume/etsy-little-hlper",
+  "description": "An Etsy tool for WordPress websites.",
+  "license": "GPL2",
+  "authors": [
+    {
+      "name": "Luca Tumedei",
+      "email": "luca@theaveragedev.com"
+    }
+  ],
+  "minimum-stability": "dev"
+}
