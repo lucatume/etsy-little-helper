@@ -13,7 +13,7 @@ abstract class ELH_AbstractStep implements ELH_ApIUserInterface, ELH_KeychainUse
     protected $api;
 
     /**
-     * @var ELH_SyncStatusInterface
+     * @var ELH_StatusInterface
      */
     protected $status;
 
@@ -37,7 +37,7 @@ abstract class ELH_AbstractStep implements ELH_ApIUserInterface, ELH_KeychainUse
         $this->next = $next;
     }
 
-    abstract public function go();
+    abstract public function run();
 
    public function set_status(ELH_StatusInterface $status){
        $this->status = $status;

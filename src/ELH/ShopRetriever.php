@@ -11,9 +11,9 @@ class ELH_ShopRetriever extends ELH_AbstractStep
         $instance->api = $api;
     }
 
-    public function go()
+    public function run()
     {
-        // TODO: Implement go() method.
+        // TODO: Implement run() method.
     }
 
 }

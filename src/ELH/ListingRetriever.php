@@ -2,8 +2,9 @@
 
 class ELH_ListingRetriever extends ELH_AbstractStep
 {
-    public function go()
+
+    public function run()
     {
-        // TODO: Implement go() method.
+        // TODO: Implement run() method.
     }
 }

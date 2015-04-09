@@ -3,7 +3,7 @@
 
 	interface ELH_StepInterface {
 
-		public function go();
+		public function run();
 
 		public function set_next( ELH_StepInterface $next );
 

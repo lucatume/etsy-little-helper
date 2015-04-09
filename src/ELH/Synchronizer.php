@@ -21,6 +21,10 @@
 			return $instance;
 		}
 
+		public function set_strategy_selector( ELH_StrategySelectorInterface $strategy_selector ) {
+			$this->strategy_selector = $strategy_selector;
+		}
+
 		public function set_first_step( ELH_StepInterface $step ) {
 			$this->first_step = $step;
 
@@ -31,19 +35,15 @@
 			if ( empty( $this->first_step ) ) {
 				return;
 			}
+			$status = new ELH_Status();
 			try {
-				$status = new ELH_Status();
 				$this->first_step->set_status( $status );
-				$this->first_step->go();
+				$this->first_step->run();
 			} catch ( ELH_SyncException $e ) {
 				$strategy = $this->strategy_selector->get_strategy_for( $e, $status );
 				$strategy->set( 'exception', $e );
 				$strategy->set( 'status', $status );
 				$strategy->run();
 			}
-		}
-
-		public function set_strategy_selector( ELH_StrategySelectorInterface $strategy_selector ) {
-			$this->strategy_selector = $strategy_selector;
 		}
 	}

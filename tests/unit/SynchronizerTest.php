@@ -10,26 +10,18 @@
 		 */
 		protected $sut;
 
-		protected function setUp() {
-			Test::setUp();
-		}
-
-		protected function tearDown() {
-			Test::tearDown();
-		}
-
 		/**
 		 * @test
 		 * it should run the first step
 		 */
 		public function it_should_run_the_first_step() {
-			$step = Test::replace( 'ELH_StepInterface::go' );
+			$step = Test::replace( 'ELH_StepInterface::run' );
 			$sut  = new ELH_Synchronizer();
 			$sut->set_first_step( $step );
 
 			$sut->sync();
 
-			$step->wasCalledOnce( 'go' );
+			$step->wasCalledOnce( 'run' );
 		}
 
 		/**
@@ -54,7 +46,7 @@
 			$strategy          = Test::replace( 'ELH_StrategyInterface' )->method( 'set' )->method( 'run' )->get();
 			$strategy_selector = Test::replace( 'ELH_StrategySelectorInterface' )
 			                         ->method( 'get_strategy_for', $strategy )->get();
-			$step              = Test::replace( 'ELH_StepInterface::go', function () {
+			$step = Test::replace( 'ELH_StepInterface::run', function () {
 				throw new ELH_SyncException();
 			} );
 
@@ -79,7 +71,7 @@
 			$strategy_selector = Test::replace( 'ELH_StrategySelectorInterface::get_strategy_for', function () use ( $strategy ) {
 				return $strategy;
 			} );
-			$step              = Test::replace( 'ELH_StepInterface::go', function () {
+			$step = Test::replace( 'ELH_StepInterface::run', function () {
 				throw new ELH_SyncException();
 			} );
 
@@ -92,6 +84,14 @@
 			$strategy->wasCalledWithOnce( [ 'exception', Test::isInstanceOf( 'ELH_SyncException' ) ], 'set' );
 			$strategy->wasCalledWithOnce( [ 'status', Test::isInstanceOf( 'ELH_StatusInterface' ) ], 'set' );
 			$strategy->wasCalledOnce( 'run' );
+		}
+
+		protected function setUp() {
+			Test::setUp();
+		}
+
+		protected function tearDown() {
+			Test::tearDown();
 		}
 
 	}
