@@ -8,5 +8,35 @@
       "email": "luca@theaveragedev.com"
     }
   ],
-  "minimum-stability": "dev"
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/lucatume/DI52"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "xrstf/composer-php52": "1.*",
+    "lucatume/DI52": "dev-master"
+  },
+  "scripts": {
+    "post-install-cmd": [
+      "xrstf\\Composer52\\Generator::onPostInstallCmd"
+    ],
+    "post-update-cmd": [
+      "xrstf\\Composer52\\Generator::onPostInstallCmd"
+    ],
+    "post-autoload-dump": [
+      "xrstf\\Composer52\\Generator::onPostInstallCmd"
+    ]
+  },
+  "require-dev": {
+    "lucatume/wp-browser": "dev-master",
+    "lucatume/function-mocker": "dev-master"
+  },
+  "autoload": {
+    "psr-0": {
+      "ELH_": "src/"
+    }
+  }
 }

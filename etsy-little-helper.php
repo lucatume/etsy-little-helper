@@ -9,8 +9,10 @@
 	 * License: GPL2
 	 */
 
-	require 'autoload.php';
+	require 'vendor/autoload_52.php';
 
 	define( 'ELH_PLUGIN_FILE', __FILE__ );
 
-	ELH_Main::instance()->hook();
+	ELH_DI::set_dependencies();
+	ELH_Main::instance()
+	        ->hook();
