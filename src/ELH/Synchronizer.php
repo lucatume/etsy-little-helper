@@ -4,7 +4,7 @@
 	class ELH_Synchronizer implements ELH_SynchronizerInterface {
 
 		/**
-		 * @var ELH_SyncStepInterface
+		 * @var ELH_StepInterface
 		 */
 		protected $first_step;
 
@@ -21,7 +21,7 @@
 			return $instance;
 		}
 
-		public function set_first_step( ELH_SyncStepInterface $step ) {
+		public function set_first_step( ELH_StepInterface $step ) {
 			$this->first_step = $step;
 
 			return $this;
@@ -34,12 +34,12 @@
 			try {
 				$status = new ELH_Status();
 				$this->first_step->set_status( $status );
-				$this->first_step->sync_or_throw();
+				$this->first_step->go();
 			} catch ( ELH_SyncException $e ) {
-				$handler = $this->strategy_selector->get_strategy_for( $e, $status );
-				$handler->set( 'exception', $e );
-				$handler->set( 'status', $status );
-				$handler->run();
+				$strategy = $this->strategy_selector->get_strategy_for( $e, $status );
+				$strategy->set( 'exception', $e );
+				$strategy->set( 'status', $status );
+				$strategy->run();
 			}
 		}
 

@@ -127,19 +127,25 @@
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/samuelwilliams/LoremIpsum.git",
-                "reference": "568f94bada0f7c95f69fabd6e7007148f90c31b0"
+                "url": "https://github.com/Badcow/LoremIpsum.git",
+                "reference": "a41a40cdb7af12f53c92789c3570145633a84dbe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/samuelwilliams/LoremIpsum/zipball/568f94bada0f7c95f69fabd6e7007148f90c31b0",
-                "reference": "568f94bada0f7c95f69fabd6e7007148f90c31b0",
+                "url": "https://api.github.com/repos/Badcow/LoremIpsum/zipball/a41a40cdb7af12f53c92789c3570145633a84dbe",
+                "reference": "a41a40cdb7af12f53c92789c3570145633a84dbe",
                 "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.9"
+            },
+            "suggest": {
+                "twig/twig": "Twig is a template language for PHP, released under the new BSD license (code and documentation)."
             },
             "type": "library",
             "autoload": {
-                "psr-0": {
-                    "Badcow": "lib/"
+                "psr-4": {
+                    "Badcow\\LoremIpsum\\": "lib/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -157,7 +163,7 @@
                 }
             ],
             "description": "Lorem ipsum generator.",
-            "time": "2013-03-05 07:52:52"
+            "time": "2015-04-06 07:42:39"
         },
         {
             "name": "codeception/codeception",
@@ -165,12 +171,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Codeception/Codeception.git",
-                "reference": "30082dfa4c1c782005705a6be138e8a3786900b0"
+                "reference": "f9f3db44b9f4686c6dc98720d3f5163a6f61d1c6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Codeception/Codeception/zipball/30082dfa4c1c782005705a6be138e8a3786900b0",
-                "reference": "30082dfa4c1c782005705a6be138e8a3786900b0",
+                "url": "https://api.github.com/repos/Codeception/Codeception/zipball/f9f3db44b9f4686c6dc98720d3f5163a6f61d1c6",
+                "reference": "f9f3db44b9f4686c6dc98720d3f5163a6f61d1c6",
                 "shasum": ""
             },
             "require": {
@@ -237,7 +243,7 @@
                 "functional testing",
                 "unit testing"
             ],
-            "time": "2015-03-25 02:44:59"
+            "time": "2015-04-08 10:41:09"
         },
         {
             "name": "doctrine/instantiator",
@@ -539,12 +545,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/lucatume/function-mocker.git",
-                "reference": "353cc47a0e436d4c908afa27274c101989654aed"
+                "reference": "739363066539a79fcb55701417f0f428a3d27ef3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lucatume/function-mocker/zipball/353cc47a0e436d4c908afa27274c101989654aed",
-                "reference": "353cc47a0e436d4c908afa27274c101989654aed",
+                "url": "https://api.github.com/repos/lucatume/function-mocker/zipball/739363066539a79fcb55701417f0f428a3d27ef3",
+                "reference": "739363066539a79fcb55701417f0f428a3d27ef3",
                 "shasum": ""
             },
             "require": {
@@ -572,7 +578,7 @@
                 }
             ],
             "description": "Function mocking with Patchwork",
-            "time": "2015-03-30 13:54:50"
+            "time": "2015-04-09 19:10:56"
         },
         {
             "name": "lucatume/tdd-helpers",
@@ -839,12 +845,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
-                "reference": "4676604b851bfc6fc02bf3394bf350c727bcebf4"
+                "reference": "c3f911d777b5bade9fb0d3cbd8d0f2ee91a87844"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/4676604b851bfc6fc02bf3394bf350c727bcebf4",
-                "reference": "4676604b851bfc6fc02bf3394bf350c727bcebf4",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/c3f911d777b5bade9fb0d3cbd8d0f2ee91a87844",
+                "reference": "c3f911d777b5bade9fb0d3cbd8d0f2ee91a87844",
                 "shasum": ""
             },
             "require": {
@@ -893,7 +899,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2015-03-19 05:49:08"
+            "time": "2015-04-09 11:59:54"
         },
         {
             "name": "phpunit/php-file-iterator",
@@ -1034,12 +1040,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-token-stream.git",
-                "reference": "db32c18eba00b121c145575fcbcd4d4d24e6db74"
+                "reference": "eab81d02569310739373308137284e0158424330"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-token-stream/zipball/db32c18eba00b121c145575fcbcd4d4d24e6db74",
-                "reference": "db32c18eba00b121c145575fcbcd4d4d24e6db74",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-token-stream/zipball/eab81d02569310739373308137284e0158424330",
+                "reference": "eab81d02569310739373308137284e0158424330",
                 "shasum": ""
             },
             "require": {
@@ -1075,7 +1081,7 @@
             "keywords": [
                 "tokenizer"
             ],
-            "time": "2015-01-17 09:51:32"
+            "time": "2015-04-08 04:46:07"
         },
         {
             "name": "phpunit/phpunit",
@@ -1155,12 +1161,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit-mock-objects.git",
-                "reference": "55484334fb4c306ed24bfc3bdb0874685c29036f"
+                "reference": "74ffb87f527f24616f72460e54b595f508dccb5c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit-mock-objects/zipball/55484334fb4c306ed24bfc3bdb0874685c29036f",
-                "reference": "55484334fb4c306ed24bfc3bdb0874685c29036f",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit-mock-objects/zipball/74ffb87f527f24616f72460e54b595f508dccb5c",
+                "reference": "74ffb87f527f24616f72460e54b595f508dccb5c",
                 "shasum": ""
             },
             "require": {
@@ -1169,7 +1175,7 @@
                 "phpunit/php-text-template": "~1.2"
             },
             "require-dev": {
-                "phpunit/phpunit": "4.4.*@dev"
+                "phpunit/phpunit": "~4.4"
             },
             "suggest": {
                 "ext-soap": "*"
@@ -1177,7 +1183,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.4.x-dev"
+                    "dev-master": "2.3.x-dev"
                 }
             },
             "autoload": {
@@ -1202,7 +1208,7 @@
                 "mock",
                 "xunit"
             ],
-            "time": "2015-03-18 09:04:51"
+            "time": "2015-04-02 05:36:41"
         },
         {
             "name": "react/promise",
@@ -1586,16 +1592,16 @@
         },
         {
             "name": "sebastian/version",
-            "version": "1.0.4",
+            "version": "1.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/version.git",
-                "reference": "a77d9123f8e809db3fbdea15038c27a95da4058b"
+                "reference": "ab931d46cd0d3204a91e1b9a40c4bc13032b58e4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/version/zipball/a77d9123f8e809db3fbdea15038c27a95da4058b",
-                "reference": "a77d9123f8e809db3fbdea15038c27a95da4058b",
+                "url": "https://api.github.com/repos/sebastianbergmann/version/zipball/ab931d46cd0d3204a91e1b9a40c4bc13032b58e4",
+                "reference": "ab931d46cd0d3204a91e1b9a40c4bc13032b58e4",
                 "shasum": ""
             },
             "type": "library",
@@ -1617,7 +1623,7 @@
             ],
             "description": "Library that helps with managing the version number of Git-hosted PHP projects",
             "homepage": "https://github.com/sebastianbergmann/version",
-            "time": "2014-12-15 14:25:24"
+            "time": "2015-02-24 06:35:25"
         },
         {
             "name": "symfony/browser-kit",
@@ -1682,12 +1688,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Console.git",
-                "reference": "780a2bc91e1b2188500ce1097f979c8f47dadf7f"
+                "reference": "252cd2fe99e7190eb919e8147464e069b1cba659"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Console/zipball/780a2bc91e1b2188500ce1097f979c8f47dadf7f",
-                "reference": "780a2bc91e1b2188500ce1097f979c8f47dadf7f",
+                "url": "https://api.github.com/repos/symfony/Console/zipball/252cd2fe99e7190eb919e8147464e069b1cba659",
+                "reference": "252cd2fe99e7190eb919e8147464e069b1cba659",
                 "shasum": ""
             },
             "require": {
@@ -1731,7 +1737,7 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "http://symfony.com",
-            "time": "2015-03-30 15:55:07"
+            "time": "2015-04-08 05:37:48"
         },
         {
             "name": "symfony/css-selector",
@@ -1794,12 +1800,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/DomCrawler.git",
-                "reference": "99f51e20e4d16100c68a0cf214d4d72da7e3e954"
+                "reference": "a4d52bbd4775d6891735c973cf39e38b27e0e677"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/DomCrawler/zipball/99f51e20e4d16100c68a0cf214d4d72da7e3e954",
-                "reference": "99f51e20e4d16100c68a0cf214d4d72da7e3e954",
+                "url": "https://api.github.com/repos/symfony/DomCrawler/zipball/a4d52bbd4775d6891735c973cf39e38b27e0e677",
+                "reference": "a4d52bbd4775d6891735c973cf39e38b27e0e677",
                 "shasum": ""
             },
             "require": {
@@ -1839,7 +1845,7 @@
             ],
             "description": "Symfony DomCrawler Component",
             "homepage": "http://symfony.com",
-            "time": "2015-03-30 15:55:07"
+            "time": "2015-04-08 05:37:48"
         },
         {
             "name": "symfony/event-dispatcher",

@@ -1,6 +1,6 @@
 <?php
 
-abstract class ELH_AbstractSyncStep implements ELH_ApIUserInterface, ELH_KeychainUserInterface, ELH_SyncStepInterface
+abstract class ELH_AbstractStep implements ELH_ApIUserInterface, ELH_KeychainUserInterface, ELH_StepInterface
 {
 
     /**
@@ -18,7 +18,7 @@ abstract class ELH_AbstractSyncStep implements ELH_ApIUserInterface, ELH_Keychai
     protected $status;
 
     /**
-     * @var ELH_SyncStepInterface
+     * @var ELH_StepInterface
      */
     private $next;
 
@@ -32,7 +32,7 @@ abstract class ELH_AbstractSyncStep implements ELH_ApIUserInterface, ELH_Keychai
         $this->keychain = $keychain;
     }
 
-    public function set_next(ELH_SyncStepInterface $next)
+    public function set_next(ELH_StepInterface $next)
     {
         $this->next = $next;
     }

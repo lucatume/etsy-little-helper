@@ -8,7 +8,7 @@
 
 interface ELH_SynchronizerInterface {
 
-	public function set_first_step( ELH_SyncStepInterface $step );
+	public function set_first_step( ELH_StepInterface $step );
 
 	public function sync();
 
