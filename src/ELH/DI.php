@@ -1,22 +1,22 @@
 <?php
 
 
-	class ELH_DI {
+	class ELH_DI extends tad_DI52_Container{
 
 		/**
 		 * @var tad_DI52_Container
 		 */
-		protected static $container;
+		protected static $instance;
 
 		/**
-		 * @return tad_DI52_Container
+		 * @return ELH_DI
 		 */
 		public static function instance() {
-			if ( empty( self::$container ) ) {
-				self::$container = new tad_DI52_Container();
+			if ( empty( self::$instance ) ) {
+				self::$instance = new self();
 			}
 
-			return self::$container;
+			return self::$instance;
 		}
 
 		/**
@@ -29,7 +29,7 @@
 
 			// Sync steps
 			$dependencies = array( '@keychain', '@api' );
-			$this->set_ctor( 'listings_retriever', 'ELH_ListingsRetriever::instance', $dependencies );
+			$this->set_ctor( 'listings_retriever', 'ELH_ListingRetriever::instance', $dependencies );
 			$this->set_ctor( 'shop_retriever', 'ELH_ShopRetriever::instance', $dependencies )
 			     ->set_next( '@listings_retriever' );
 
