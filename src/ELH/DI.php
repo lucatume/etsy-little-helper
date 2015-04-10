@@ -26,13 +26,12 @@
 			$container->set_ctor( 'api', 'ELH_Api' );
 
 			$args = array( '@keychain', '@api' );
-			$container->set_ctor( 'shop_retriever', 'ELH_ShopRetriever', $args );
+			$container->set_ctor( 'shop_retriever', 'ELH_ShopRetriever::instance', $args );
 
 			$args = array( '@keychain', '@api' );
-			$container->set_ctor( 'listings_retriever', 'ELH_ListingsRetriever', $args );
+			$container->set_ctor( 'listings_retriever', 'ELH_ListingsRetriever::instance', $args );
 
-			$args = array();
-			$container->set_ctor( 'synchronizer', 'ELH_Synchronizer', $args )
+			$container->set_ctor( 'synchronizer', 'ELH_Synchronizer::instance', $args )
 			          ->add_step( '@shop_retriever' )
 			          ->add_step( '@listings_retriever' )
 			          ->set_retry_interval( '#sync_retry_interval' )

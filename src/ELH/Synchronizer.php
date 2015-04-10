@@ -13,6 +13,14 @@
 		 */
 		protected $strategy_selector;
 
+		public static function instance( ELH_StrategySelectorInterface $strategy_selector ) {
+			$instance = new self;
+
+			$instance->set_strategy_selector( $strategy_selector );
+
+			return $instance;
+		}
+
 		public function set_strategy_selector( ELH_StrategySelectorInterface $strategy_selector ) {
 			$this->strategy_selector = $strategy_selector;
 		}
