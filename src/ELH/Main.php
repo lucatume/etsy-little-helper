@@ -3,7 +3,7 @@
 
 	class ELH_Main {
 
-		const SYNC_HOOK = 'elh_daily_sync';
+		const SYNC_HOOK = 'elh_sync';
 
 		/**
 		 * @var ELH_DI
@@ -20,8 +20,8 @@
 		}
 
 		public function hook_base() {
-			register_activation_hook( ELH_PLUGIN_FILE, array( $this, 'activate' ) );
-			register_deactivation_hook( ELH_PLUGIN_FILE, array( $this, 'deactivate' ) );
+			register_activation_hook( ELH_ROOT, array( $this, 'activate' ) );
+			register_deactivation_hook( ELH_ROOT, array( $this, 'deactivate' ) );
 			add_action( 'plugins_loaded', array( $this, 'load_text_domain' ) );
 
 			return $this;
@@ -39,7 +39,7 @@
 		}
 
 		public function load_text_domain() {
-			load_plugin_textdomain( 'elh', false, dirname( plugin_basename( ELH_PLUGIN_FILE ) ) . '/languages' );
+			load_plugin_textdomain( 'elh', false, dirname( plugin_basename( ELH_ROOT ) ) . '/languages' );
 		}
 
 		public function set_di_container( ELH_DI $di_container ) {

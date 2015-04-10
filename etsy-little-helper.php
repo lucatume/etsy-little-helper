@@ -11,10 +11,11 @@
 
 	require 'vendor/autoload_52.php';
 
-	define( 'ELH_PLUGIN_FILE', __FILE__ );
-
 	$di_container = ELH_DI::instance();
-	$di_container->set_dependencies();
-	ELH_Main::instance( $di_container )
-		->hook_base()
-		->hook_synchronizer();
+
+	define( 'ELH_ROOT', __FILE__ );
+	define( 'ELH_URL', plugins_url( '/', __FILE__ ) );
+
+	$di_container->set_consts()->set_dependencies();
+
+	ELH_Main::instance( $di_container )->hook_base()->hook_synchronizer();

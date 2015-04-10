@@ -13,6 +13,25 @@
 
 		/**
 		 * @test
+		 * it should hook activation, deactivation and text domain
+		 */
+		public function it_should_hook_activation_deactivation_and_text_domain() {
+			define( 'ELH_ROOT', 'foo' );
+			$register_activation_hook = Test::replace( 'register_activation_hook' );
+			$register_deactivation_hook = Test::replace( 'register_deactivation_hook' );
+			$add_action = Test::replace( 'add_action' );
+
+			$sut = new ELH_Main();
+
+			$sut->hook_base();
+
+			$register_activation_hook->wasCalledWithOnce( [ 'foo', [ $sut, 'activate' ] ] );
+			$register_deactivation_hook->wasCalledWithOnce( [ 'foo', [ $sut, 'deactivate' ] ] );
+			$add_action->wasCalledWithOnce( [ 'plugins_loaded', [ $sut, 'load_text_domain' ] ] );
+		}
+
+		/**
+		 * @test
 		 * it should hook_base the synchronizer to the sync hook_base on hook_base method
 		 */
 		public function it_should_hook_the_synchronizer_to_the_sync_hook_on_hook_method() {

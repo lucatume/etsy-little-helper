@@ -41,4 +41,11 @@
 			return $this;
 		}
 
+		public function set_consts() {
+			$this->set_var('sync_start_time', time());
+			$this->set_var('sync_interval', 'hourly');
+
+			return $this;
+		}
+
 	}
