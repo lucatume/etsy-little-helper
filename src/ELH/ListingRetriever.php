@@ -1,10 +1,17 @@
 <?php
 
-class ELH_ListingRetriever extends ELH_AbstractSyncStep
-{
 
-    public function run()
-    {
-        // TODO: Implement run() method.
-    }
-}
+	class ELH_ListingRetriever extends ELH_AbstractSyncStep {
+
+		public static function instance( ELH_KeychainInterface $keychain, ELH_ApiInterface $api ) {
+			$instance           = new self();
+			$instance->keychain = $keychain;
+			$instance->api      = $api;
+
+			return $instance;
+		}
+
+		public function run() {
+			// TODO: Implement run() method.
+		}
+	}
