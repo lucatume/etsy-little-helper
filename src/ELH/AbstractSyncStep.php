@@ -39,6 +39,8 @@
 			$this->status = $status;
 		}
 
-		abstract public function run();
+		public function run() {
+
+		}
 
 	}
