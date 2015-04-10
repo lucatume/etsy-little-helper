@@ -12,6 +12,10 @@
     {
       "type": "vcs",
       "url": "https://github.com/lucatume/DI52"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/lucatume/function-mocker"
     }
   ],
   "minimum-stability": "dev",

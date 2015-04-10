@@ -15,4 +15,6 @@
 
 	$di_container = ELH_DI::instance();
 	$di_container->set_dependencies();
-	ELH_Main::instance( $di_container )->hook();
+	ELH_Main::instance( $di_container )
+		->hook_base()
+		->hook_synchronizer();

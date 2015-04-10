@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "3cb431c3729976441f25f47bf7cae468",
+    "hash": "71031328468214bc1fa17195f37a2969",
     "packages": [
         {
             "name": "lucatume/DI52",
@@ -545,12 +545,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/lucatume/function-mocker.git",
-                "reference": "739363066539a79fcb55701417f0f428a3d27ef3"
+                "reference": "9869fa5da63caf92609ae9bdd2f2255458cf85ea"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lucatume/function-mocker/zipball/739363066539a79fcb55701417f0f428a3d27ef3",
-                "reference": "739363066539a79fcb55701417f0f428a3d27ef3",
+                "url": "https://api.github.com/repos/lucatume/function-mocker/zipball/9869fa5da63caf92609ae9bdd2f2255458cf85ea",
+                "reference": "9869fa5da63caf92609ae9bdd2f2255458cf85ea",
                 "shasum": ""
             },
             "require": {
@@ -567,7 +567,6 @@
                     "tad\\FunctionMocker": "src"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "GPL-2.0+"
             ],
@@ -578,7 +577,11 @@
                 }
             ],
             "description": "Function mocking with Patchwork",
-            "time": "2015-04-09 19:10:56"
+            "support": {
+                "source": "https://github.com/lucatume/function-mocker/tree/master",
+                "issues": "https://github.com/lucatume/function-mocker/issues"
+            },
+            "time": "2015-04-10 08:55:19"
         },
         {
             "name": "lucatume/tdd-helpers",
@@ -1632,22 +1635,22 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/BrowserKit.git",
-                "reference": "c135dd2a06216cfcbb00863770c3df075450992e"
+                "reference": "4bc76eb9201878e575af0a7954df2acc8509cb08"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/BrowserKit/zipball/c135dd2a06216cfcbb00863770c3df075450992e",
-                "reference": "c135dd2a06216cfcbb00863770c3df075450992e",
+                "url": "https://api.github.com/repos/symfony/BrowserKit/zipball/4bc76eb9201878e575af0a7954df2acc8509cb08",
+                "reference": "4bc76eb9201878e575af0a7954df2acc8509cb08",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.9",
-                "symfony/dom-crawler": "~2.0,>=2.0.5|~3.0.0"
+                "symfony/dom-crawler": "~2.0,>=2.0.5"
             },
             "require-dev": {
-                "symfony/css-selector": "~2.0,>=2.0.5|~3.0.0",
-                "symfony/phpunit-bridge": "~2.7|~3.0.0",
-                "symfony/process": "~2.0,>=2.0.5|~3.0.0"
+                "symfony/css-selector": "~2.0,>=2.0.5",
+                "symfony/phpunit-bridge": "~2.7",
+                "symfony/process": "~2.0,>=2.0.5"
             },
             "suggest": {
                 "symfony/process": ""
@@ -1679,7 +1682,7 @@
             ],
             "description": "Symfony BrowserKit Component",
             "homepage": "http://symfony.com",
-            "time": "2015-03-30 15:55:07"
+            "time": "2015-04-10 07:23:38"
         },
         {
             "name": "symfony/console",
