@@ -7,6 +7,8 @@
 			$instance           = new self();
 			$instance->keychain = $keychain;
 			$instance->api      = $api;
+
+			return $instance;
 		}
 
 		public function run() {
