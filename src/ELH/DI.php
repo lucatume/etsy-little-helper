@@ -20,7 +20,7 @@
 			$container = self::instance();
 
 			$container->set_var( 'sync_retry_interval', 3600 );
-			$container->set_vae( 'sync_retry_attempts', 3 );
+			$container->set_var( 'sync_retry_attempts', 3 );
 
 			$container->set_ctor( 'keychain', 'ELH_Keychain' );
 			$container->set_ctor( 'api', 'ELH_Api' );

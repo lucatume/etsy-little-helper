@@ -1,69 +1,60 @@
 <?php
 
-/**
- * Created by IntelliJ IDEA.
- * User: Luca
- * Date: 27/03/15
- * Time: 07:58
- */
-class ELH_ApiRequestParameter
-{
-    /**
-     * @return string
-     */
-    public function name()
-    {
-        return $this->name;
-    }
 
-    /**
-     * @return boolean
-     */
-    public function is_required()
-    {
-        return $this->required;
-    }
+	class ELH_ApiRequestParameter {
 
-    /**
-     * @return mixed
-     */
-    public function default_value()
-    {
-        return $this->default_value;
-    }
+		/**
+		 * @return string
+		 */
+		public function name() {
+			return $this->name;
+		}
 
-    /**
-     * @return array
-     */
-    public function type()
-    {
-        return $this->type;
-    }
+		/**
+		 * @return boolean
+		 */
+		public function is_required() {
+			return $this->required;
+		}
 
-    /**
-     * @var string
-     */
-    private $name;
+		/**
+		 * @return mixed
+		 */
+		public function default_value() {
+			return $this->default_value;
+		}
 
-    /**
-     * @var bool
-     */
-    private $required;
+		/**
+		 * @return array
+		 */
+		public function type() {
+			return $this->type;
+		}
 
-    /**
-     * @var mixed
-     */
-    private $default_value;
-    /**
-     * @var array
-     */
-    private $type;
+		/**
+		 * @var string
+		 */
+		private $name;
 
-    public function __construct($name, $required, $default_value, array $type)
-    {
-        $this->name = $name;
-        $this->required = $required;
-        $this->default_value = $default_value;
-        $this->type = $type;
-    }
-}
+		/**
+		 * @var bool
+		 */
+		private $required;
+
+		/**
+		 * @var mixed
+		 */
+		private $default_value;
+
+		/**
+		 * @var array
+		 */
+		private $type;
+
+		public function __construct( $name, $required, $default_value, array $type ) {
+			$this->name          = $name;
+			$this->required      = $required;
+			$this->default_value = $default_value;
+			$this->type          = $type;
+		}
+	}
