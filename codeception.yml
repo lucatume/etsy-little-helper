@@ -1,4 +1,13 @@
 actor: Tester
+coverage:
+    whitelist:
+        include:
+            - src/*
+        exclude:
+            - tests/*
+            - vendor/*
+            - etsy-little-helper.php
+            - src/DI.php
 paths:
     tests: tests
     log: tests/_output
