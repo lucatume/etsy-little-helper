@@ -1,6 +1,6 @@
 <?php
 
-abstract class ELH_AbstractStep implements ELH_ApIUserInterface, ELH_KeychainUserInterface, ELH_StepInterface
+abstract class ELH_AbstractSyncStep implements ELH_ApIUserInterface, ELH_KeychainUserInterface, ELH_StepInterface
 {
 
     /**
