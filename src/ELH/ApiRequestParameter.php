@@ -25,7 +25,7 @@
 		}
 
 		/**
-		 * @return array
+		 * @return string
 		 */
 		public function type() {
 			return $this->type;
@@ -47,11 +47,11 @@
 		private $default_value;
 
 		/**
-		 * @var array
+		 * @var string
 		 */
 		private $type;
 
-		public function __construct( $name, $required, $default_value, array $type ) {
+		public function __construct( $name, $required, $default_value, $type ) {
 			$this->name          = $name;
 			$this->required      = $required;
 			$this->default_value = $default_value;
