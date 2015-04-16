@@ -128,4 +128,28 @@
 			$data = [ 'foo' => 23, 'bar' => 'woo' ];
 			$out  = $sut->get_compiled_request( $data );
 		}
+
+		/**
+		 * @test
+		 * it should throw an exception if an optional parameter has the wrong type
+		 */
+		public function it_should_throw_an_exception_if_an_optional_parameter_has_the_wrong_type() {
+			$this->setExpectedException( 'ELH_RequestParameterException' );
+
+			Test::replace('ELH_TypeUtils::is_a', false);
+
+			$sut     = new ELH_RequestCompiler();
+			$params  = [
+				new ELH_ApiRequestParameter( 'foo', true, null, 'string' ),
+				new ELH_ApiRequestParameter( 'baz', false, 10, 'int' ),
+				new ELH_ApiRequestParameter( 'bar', false, 'none', 'string' )
+			];
+			$request = Test::replace( 'ELH_ApiRequestInterface' )->method( 'parameters', $params )
+			               ->method( 'uri', '/listings/:foo/shops' )->get();
+			$sut->set_request( $request );
+
+			$data = [ 'foo' => 'some', 'bar' => 23 ];
+
+			$out  = $sut->get_compiled_request( $data );
+		}
 	}
