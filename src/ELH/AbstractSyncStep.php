@@ -21,7 +21,7 @@
 		/**
 		 * @var ELH_StepInterface
 		 */
-		private $next;
+		protected $next;
 
 		public function set_api( ELH_ApiInterface $api ) {
 			$this->api = $api;

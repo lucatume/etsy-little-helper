@@ -1,7 +1,7 @@
 <?php
 
 
-	class ELH_RequestCompiler {
+	class ELH_RequestCompiler implements ELH_RequestCompilerInterface {
 
 		/**
 		 * @var ELH_ApiRequestInterface

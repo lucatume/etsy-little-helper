@@ -3,7 +3,9 @@
 
 	class ELH_Main {
 
-		const SYNC_HOOK = 'elh_sync';
+		const SYNC_HOOK      = 'elh_sync';
+		const USER_ID_OPTION = '_elh_user_id';
+		const API_BASE       = 'https://openapi.etsy.com/v2';
 
 		/**
 		 * @var ELH_DI
@@ -29,7 +31,7 @@
 
 		public function activate() {
 			wp_clear_scheduled_hook( self::SYNC_HOOK );
-			$start = $this->di_container->get_var( 'sync_start_time' );
+			$start    = $this->di_container->get_var( 'sync_start_time' );
 			$interval = $this->di_container->get_var( 'sync_interval' );
 			wp_schedule_event( $start, $interval, self::SYNC_HOOK );
 		}

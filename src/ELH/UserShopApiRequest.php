@@ -14,6 +14,7 @@
 				new ELH_ApiRequestParameter( 'limit', false, 25, 'int' ),
 				new ELH_ApiRequestParameter( 'offset', false, false, 'int' ),
 				new ELH_ApiRequestParameter( 'page', false, false, 'int' ),
+				new ELH_ApiRequestParameter( 'api_key', true, false, 'string' ),
 			);
 		}
 
