@@ -1,17 +1,39 @@
 <?php
 
 
-	class ELH_ListingRetriever extends ELH_AbstractSyncStep {
+class ELH_ListingRetriever extends ELH_AbstractSyncStep {
 
-		public static function instance( ELH_KeychainInterface $keychain, ELH_ApiInterface $api ) {
-			$instance           = new self();
-			$instance->keychain = $keychain;
-			$instance->api      = $api;
+	public static function instance( ELH_KeychainInterface $keychain, ELH_ApiInterface $api, ELH_ApiRequestInterface $request, ELH_RequestCompilerInterface $request_compiler ) {
+		$instance                   = new self();
+		$instance->keychain         = $keychain;
+		$instance->api              = $api;
+		$instance->request          = $request;
+		$instance->request_compiler = $request_compiler;
 
-			return $instance;
-		}
+		return $instance;
+	}
 
-		public function run() {
-			// TODO: Implement run() method.
+	/**
+	 * @param $data
+	 *
+	 * @throws ELH_SyncException
+	 */
+	protected function ensure_request_specifics( $data ) {
+		if ( $data['response']['code'] != '200' ) {
+			$message = sprintf( 'Listings retrieval failed with code %d and message "%s"', $data['response']['code'], $data['response']['message'] );
+			throw new ELH_SyncException( $message );
 		}
 	}
+
+	/**
+	 * @return array
+	 */
+	protected function get_request_data() {
+		$data = array(
+			'user_id' => get_option( ELH_Main::USER_ID_OPTION ),
+			'api_key' => $this->api->get_api_key()
+		);
+
+		return $data;
+	}
+}
