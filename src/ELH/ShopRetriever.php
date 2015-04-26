@@ -14,21 +14,6 @@ class ELH_ShopRetriever extends ELH_RequestingSyncStep {
 	}
 
 	/**
-	 * @return array
-	 */
-	protected function get_request_url() {
-		$data = array(
-			'user_id' => get_option( ELH_Main::USER_ID_OPTION ),
-			'api_key' => $this->api->get_api_key()
-		);
-
-		$this->request_compiler->set_request( $this->request );
-		$uri = $this->request_compiler->get_compiled_request( $data );
-
-		return ELH_Main::API_BASE . $uri;
-	}
-
-	/**
 	 * @param $data
 	 *
 	 * @throws ELH_SyncException
@@ -38,6 +23,18 @@ class ELH_ShopRetriever extends ELH_RequestingSyncStep {
 			$message = sprintf( 'Shop retrieving failed with code %d and message "%s"', $data['response']['code'], $data['response']['message'] );
 			throw new ELH_SyncException( $message );
 		}
+	}
+
+	/**
+	 * @return array
+	 */
+	protected function get_request_data() {
+		$data = array(
+			'user_id' => get_option( ELH_Main::USER_ID_OPTION ),
+			'api_key' => $this->api->get_api_key()
+		);
+
+		return $data;
 	}
 
 }

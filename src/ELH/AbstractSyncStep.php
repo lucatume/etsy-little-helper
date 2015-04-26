@@ -43,4 +43,16 @@
 
 		}
 
+		/**
+		 * @return array
+		 */
+		protected function get_request_url() {
+			$data = $this->get_request_data();
+
+			$this->request_compiler->set_request( $this->request );
+			$uri = $this->request_compiler->get_compiled_request( $data );
+
+			return ELH_Main::API_BASE . $uri;
+		}
+
 	}
