@@ -16,7 +16,7 @@ class ELH_ShopListingsApiRequest implements ELH_ApiRequestInterface {
 			new ELH_ApiRequestParameter( 'sort_order', false, 'down', '{up,down}' ),
 			new ELH_ApiRequestParameter( 'min_price', false, false, 'float' ),
 			new ELH_ApiRequestParameter( 'max_price', false, false, 'float' ),
-			new ELH_ApiRequestParameter( 'color', false, false, 'color' ),
+			new ELH_ApiRequestParameter( 'color', false, false, 'hsv|rgb' ),
 			new ELH_ApiRequestParameter( 'color_accuracy', false, 0, '[0-30]' ),
 			new ELH_ApiRequestParameter( 'tags', false, false, '[string]' ),
 			new ELH_ApiRequestParameter( 'category', false, false, 'string' ),
