@@ -1,7 +1,7 @@
 <?php
 
 
-class ELH_ListingRetriever extends ELH_AbstractSyncStep {
+class ELH_ListingRetriever extends ELH_RequestingSyncStep {
 
 	public static function instance( ELH_KeychainInterface $keychain, ELH_ApiInterface $api, ELH_ApiRequestInterface $request, ELH_RequestCompilerInterface $request_compiler ) {
 		$instance                   = new self();
@@ -30,8 +30,7 @@ class ELH_ListingRetriever extends ELH_AbstractSyncStep {
 	 */
 	protected function get_request_data() {
 		$data = array(
-			'user_id' => get_option( ELH_Main::USER_ID_OPTION ),
-			'api_key' => $this->api->get_api_key()
+			'shop_id' => $this->status->get( 'shop_id' )
 		);
 
 		return $data;
